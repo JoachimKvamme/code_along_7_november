@@ -10,12 +10,23 @@ namespace code_along_7_november.Services
 {
     public class VotingService : IVotingService
     {
+
+        private List<Election> activeElection = new List<Election>();
         public Election CreateElection()
         {
-            throw new NotImplementedException();
+            var hardcodedOptions = new List<ElectionOption> {
+                new ElectionOption("Apple"),
+                new ElectionOption("Microsoft")
+            };
+
+            Election election = new Election(hardcodedOptions);
+
+            activeElection.Add(election);
+
+            return election;
         }
 
-        public Alternative[] GetAlternatives(Guid id)
+        public ElectionOption[] GetAlternatives(Guid id)
         {
             throw new NotImplementedException();
         }

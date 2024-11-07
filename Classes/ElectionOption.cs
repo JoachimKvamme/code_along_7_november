@@ -5,10 +5,15 @@ using System.Threading.Tasks;
 
 namespace code_along_7_november.Classes
 {
-    public class Alternative
+    public class ElectionOption
     {
         public Guid Id { get; set; } = new Guid();
         public string Name { get; set; } = string.Empty;
+
+        public ElectionOption(string name)
+        {
+            Name = name;
+        }
 
     }
 }

@@ -10,7 +10,7 @@ namespace code_along_7_november.Interfaces
     public interface IVotingService
     {
         Election CreateElection();
-        Alternative[] GetAlternatives(Guid id);
+        ElectionOption[] GetAlternatives(Guid id);
         void GiveVote(Vote vote);
         ElectionResult GetResult(Guid id);
 

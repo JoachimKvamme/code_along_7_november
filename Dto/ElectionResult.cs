@@ -9,6 +9,6 @@ namespace code_along_7_november.Dto
     public class ElectionResult
     {
 
-        public List<(Alternative, int)> MyProperty { get; set; }
+        public List<(ElectionOption, int)> Result { get; set; } = new List<(ElectionOption, int)>();
     }
 }
