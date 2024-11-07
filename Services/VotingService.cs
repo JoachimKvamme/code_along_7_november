@@ -11,7 +11,7 @@ namespace code_along_7_november.Services
     public class VotingService : IVotingService
     {
 
-        private List<Election> activeElection = new List<Election>();
+        private List<Election> activeElections = new List<Election>();
         public Election CreateElection()
         {
             var hardcodedOptions = new List<ElectionOption> {
@@ -21,9 +21,14 @@ namespace code_along_7_november.Services
 
             Election election = new Election(hardcodedOptions);
 
-            activeElection.Add(election);
+            activeElections.Add(election);
 
             return election;
+        }
+
+        public List<Election> GetAll()
+        {
+            return activeElections;
         }
 
         public ElectionOption[] GetAlternatives(Guid id)
