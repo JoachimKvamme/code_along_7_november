@@ -15,7 +15,7 @@ namespace code_along_7_november.Services
             throw new NotImplementedException();
         }
 
-        public Alternatives[] GetAlternatives(Guid id)
+        public Alternative[] GetAlternatives(Guid id)
         {
             throw new NotImplementedException();
         }
