@@ -9,5 +9,9 @@ namespace code_along_7_november.Classes
     {
         public Guid Id { get; init; } = new Guid();
         public required ElectionOption ChosenAlternative { get; set; }
+        public Vote()
+        {
+            Id = Guid.NewGuid();
+        }
     }
 }

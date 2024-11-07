@@ -7,12 +7,13 @@ namespace code_along_7_november.Classes
 {
     public class ElectionOption
     {
-        public Guid Id { get; set; } = new Guid();
+        public Guid Id { get; set; }
         public string Name { get; set; } = string.Empty;
 
         public ElectionOption(string name)
         {
             Name = name;
+            Id = Guid.NewGuid();
         }
 
     }
